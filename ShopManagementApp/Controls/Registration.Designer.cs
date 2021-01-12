@@ -1,7 +1,7 @@
 ﻿
 namespace ShopManagementApp
 {
-    partial class Registration
+    partial class RegistrationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,13 +39,13 @@ namespace ShopManagementApp
             this.registrationControl1.Size = new System.Drawing.Size(795, 554);
             this.registrationControl1.TabIndex = 0;
             // 
-            // Registration
+            // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1073, 560);
             this.Controls.Add(this.registrationControl1);
-            this.Name = "Registration";
+            this.Name = "RegistrationForm";
             this.Text = "Registration";
             this.Load += new System.EventHandler(this.Registration_Load);
             this.ResumeLayout(false);

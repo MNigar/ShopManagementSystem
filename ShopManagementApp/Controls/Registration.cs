@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace ShopManagementApp
 {
-    public partial class Registration : Form
+    public partial class RegistrationForm : Form
     {
-        public Registration()
+        public RegistrationForm()
         {
             InitializeComponent();
             this.registrationControl1.btn_Registration.Click += Btn_Registration_Click;
@@ -24,7 +24,7 @@ namespace ShopManagementApp
 
         private void Btn_login_Click(object sender, EventArgs e)
         {
-            Login login = new Login();          
+            LoginForm login = new LoginForm();          
             login.Show();           
         }
 
