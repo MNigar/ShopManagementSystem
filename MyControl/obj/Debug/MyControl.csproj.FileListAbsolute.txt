@@ -1,0 +1,8 @@
+D:\C#course\ShopManagementApp\MyControl\bin\Debug\MyControl.dll
+D:\C#course\ShopManagementApp\MyControl\bin\Debug\MyControl.pdb
+D:\C#course\ShopManagementApp\MyControl\obj\Debug\MyControl.Controls.RegistrationControl.resources
+D:\C#course\ShopManagementApp\MyControl\obj\Debug\MyControl.csproj.GenerateResource.cache
+D:\C#course\ShopManagementApp\MyControl\obj\Debug\MyControl.csproj.CoreCompileInputs.cache
+D:\C#course\ShopManagementApp\MyControl\obj\Debug\MyControl.dll
+D:\C#course\ShopManagementApp\MyControl\obj\Debug\MyControl.pdb
+D:\C#course\ShopManagementApp\MyControl\obj\Debug\MyControl.csprojAssemblyReference.cache

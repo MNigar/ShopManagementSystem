@@ -1,0 +1,14 @@
+D:\C#course\ShopManagementApp\ShopManagementApp\bin\Debug\ShopManagementApp.exe.config
+D:\C#course\ShopManagementApp\ShopManagementApp\bin\Debug\ShopManagementApp.exe
+D:\C#course\ShopManagementApp\ShopManagementApp\bin\Debug\ShopManagementApp.pdb
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.csprojAssemblyReference.cache
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.Properties.Resources.resources
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.csproj.GenerateResource.cache
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.csproj.CoreCompileInputs.cache
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.exe
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.pdb
+D:\C#course\ShopManagementApp\ShopManagementApp\bin\Debug\MyControl.dll
+D:\C#course\ShopManagementApp\ShopManagementApp\bin\Debug\MyControl.pdb
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.Login.resources
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.csproj.CopyComplete
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.Registration.resources
