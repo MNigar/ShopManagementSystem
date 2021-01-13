@@ -30,13 +30,13 @@ namespace ShopManagementApp.Controls
             Book book2 = new Book()
             {
                 Id = 1,
-                Name = "Java",
+                Name = "Python",
                 Image= @"D:\C#course\ShopManagementApp\ShopManagementApp\Images\51tjBN6kkEL._SX374_BO1,204,203,200_.jpg"
             };
             Book book3 = new Book()
             {
                 Id = 1,
-                Name = "Python",
+                Name = "Java",
                 Image = @"D:\C#course\ShopManagementApp\ShopManagementApp\Images\images.jpg"
             };
             DataBaseSecond.Books.Add(book1);
@@ -89,9 +89,6 @@ namespace ShopManagementApp.Controls
         }
 
         public BookForm() : this(null) { }
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

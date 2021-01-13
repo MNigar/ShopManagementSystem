@@ -38,7 +38,6 @@ namespace ShopManagementApp
             this.registrationControl1.Name = "registrationControl1";
             this.registrationControl1.Size = new System.Drawing.Size(795, 554);
             this.registrationControl1.TabIndex = 0;
-            this.registrationControl1.Load += new System.EventHandler(this.registrationControl1_Load);
             // 
             // RegistrationForm
             // 

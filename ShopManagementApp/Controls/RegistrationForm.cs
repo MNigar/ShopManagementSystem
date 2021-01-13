@@ -87,9 +87,6 @@ namespace ShopManagementApp
 
         }
 
-        private void registrationControl1_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
