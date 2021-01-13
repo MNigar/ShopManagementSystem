@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace ShopManagementApp.Models
 {
-   public class User: Entity
+   public  class Book:Entity
     {
-    
-        public string Surname { get; set; }
-        public string Email { get; set; }
-        public string  Password { get; set; }
-
+      public string Image { get; set; }
     }
 }

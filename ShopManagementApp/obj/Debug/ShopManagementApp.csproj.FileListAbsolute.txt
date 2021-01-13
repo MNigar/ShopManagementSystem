@@ -9,6 +9,7 @@ D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.exe
 D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.pdb
 D:\C#course\ShopManagementApp\ShopManagementApp\bin\Debug\MyControl.dll
 D:\C#course\ShopManagementApp\ShopManagementApp\bin\Debug\MyControl.pdb
-D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.Login.resources
 D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.csproj.CopyComplete
-D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.Registration.resources
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.LoginForm.resources
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.RegistrationForm.resources
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.Controls.BookForm.resources

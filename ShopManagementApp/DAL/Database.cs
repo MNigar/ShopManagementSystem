@@ -12,8 +12,10 @@ namespace ShopManagementApp.DAL
         private static List<User> _Users;
 
         public Database()
-        {
-            _Users = new List<User>();
+        {   if (_Users == null)
+            {
+                _Users = new List<User>();
+            }
         }
         public  void Adduser(User user)
         {
@@ -30,6 +32,6 @@ namespace ShopManagementApp.DAL
             return _Users;
 
         }
-
+       
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace ShopManagementApp
 {
-    partial class Login
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -56,7 +56,6 @@ namespace ShopManagementApp
             this.lbl_Password.Size = new System.Drawing.Size(42, 20);
             this.lbl_Password.TabIndex = 1;
             this.lbl_Password.Text = "Şifrə";
-            this.lbl_Password.Click += new System.EventHandler(this.label2_Click);
             // 
             // txb_Email
             // 
@@ -97,7 +96,6 @@ namespace ShopManagementApp
             this.gbx_Login.TabIndex = 6;
             this.gbx_Login.TabStop = false;
             this.gbx_Login.Text = "Login";
-            this.gbx_Login.Enter += new System.EventHandler(this.gbx_Login_Enter);
             // 
             // btn_Login
             // 
@@ -109,7 +107,7 @@ namespace ShopManagementApp
             this.btn_Login.UseVisualStyleBackColor = true;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
-            // Login
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,9 +115,8 @@ namespace ShopManagementApp
             this.Controls.Add(this.gbx_Login);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Login";
+            this.Name = "LoginForm";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.gbx_Login.ResumeLayout(false);
             this.gbx_Login.PerformLayout();
             this.ResumeLayout(false);
