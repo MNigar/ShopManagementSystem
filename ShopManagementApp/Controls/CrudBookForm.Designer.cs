@@ -32,7 +32,6 @@ namespace ShopManagementApp.Controls
             this.txb_Id = new System.Windows.Forms.TextBox();
             this.txb_Name = new System.Windows.Forms.TextBox();
             this.txb_Price = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.rtb_Table = new System.Windows.Forms.RichTextBox();
             this.btn_GetAll = new System.Windows.Forms.Button();
             this.btn_Create = new System.Windows.Forms.Button();
@@ -42,7 +41,6 @@ namespace ShopManagementApp.Controls
             this.lbl_Id = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_Price = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txb_Id
@@ -65,13 +63,6 @@ namespace ShopManagementApp.Controls
             this.txb_Price.Name = "txb_Price";
             this.txb_Price.Size = new System.Drawing.Size(207, 26);
             this.txb_Price.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(144, 255);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(207, 26);
-            this.textBox4.TabIndex = 3;
             // 
             // rtb_Table
             // 
@@ -159,21 +150,11 @@ namespace ShopManagementApp.Controls
             this.lbl_Price.TabIndex = 12;
             this.lbl_Price.Text = "Price";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 255);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "label4";
-            // 
             // CrudBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1103, 525);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.lbl_Price);
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.lbl_Id);
@@ -183,7 +164,6 @@ namespace ShopManagementApp.Controls
             this.Controls.Add(this.btn_Create);
             this.Controls.Add(this.btn_GetAll);
             this.Controls.Add(this.rtb_Table);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.txb_Price);
             this.Controls.Add(this.txb_Name);
             this.Controls.Add(this.txb_Id);
@@ -199,7 +179,6 @@ namespace ShopManagementApp.Controls
         private System.Windows.Forms.TextBox txb_Id;
         private System.Windows.Forms.TextBox txb_Name;
         private System.Windows.Forms.TextBox txb_Price;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.RichTextBox rtb_Table;
         private System.Windows.Forms.Button btn_GetAll;
         private System.Windows.Forms.Button btn_Create;
@@ -209,6 +188,5 @@ namespace ShopManagementApp.Controls
         private System.Windows.Forms.Label lbl_Id;
         private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.Label lbl_Price;
-        private System.Windows.Forms.Label label4;
     }
 }
