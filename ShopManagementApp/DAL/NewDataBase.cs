@@ -126,13 +126,13 @@ namespace ShopManagementApp.DAL
             }
             return book;
         }
-        public Book Update(int id,Book book)
+        public Book Update(int Id,Book book)
         {
            
             try
             {
               
-                string query1 = $"UPDATE BOOKS SET NAME ='{book.Name}', PRICE = {book.Price} WHERE ID={id}";
+                string query1 = $"UPDATE BOOKS SET NAME ='{book.Name}', PRICE = {book.Price} WHERE ID={Id}";
                
                 using (SqlCommand sqlCommand = new SqlCommand(query1, _sqlConnection))
                 {
