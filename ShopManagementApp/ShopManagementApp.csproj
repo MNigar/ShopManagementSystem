@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,6 +53,12 @@
     <Compile Include="Controls\BookForm.Designer.cs">
       <DependentUpon>BookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CrudBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\CrudBookForm.Designer.cs">
+      <DependentUpon>CrudBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +74,7 @@
     <Compile Include="DAL\Database.cs" />
     <Compile Include="DAL\DataBaseSecond.cs" />
     <Compile Include="DAL\EntityModel.cs" />
+    <Compile Include="DAL\NewDataBase.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\User.cs" />
@@ -74,6 +82,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\BookForm.resx">
       <DependentUpon>BookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CrudBookForm.resx">
+      <DependentUpon>CrudBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

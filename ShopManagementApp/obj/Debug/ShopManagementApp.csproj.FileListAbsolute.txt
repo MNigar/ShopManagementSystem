@@ -13,3 +13,4 @@ D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.cspr
 D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.LoginForm.resources
 D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.RegistrationForm.resources
 D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.Controls.BookForm.resources
+D:\C#course\ShopManagementApp\ShopManagementApp\obj\Debug\ShopManagementApp.Controls.CrudBookForm.resources
