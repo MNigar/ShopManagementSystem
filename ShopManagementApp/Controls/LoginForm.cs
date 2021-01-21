@@ -48,5 +48,10 @@ namespace ShopManagementApp
 
            registration.ShowDialog();
         }
+
+        private void gbx_Login_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -96,6 +96,7 @@ namespace ShopManagementApp
             this.gbx_Login.TabIndex = 6;
             this.gbx_Login.TabStop = false;
             this.gbx_Login.Text = "Login";
+            this.gbx_Login.Enter += new System.EventHandler(this.gbx_Login_Enter);
             // 
             // btn_Login
             // 

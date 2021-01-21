@@ -32,7 +32,6 @@ namespace ShopManagementApp.Controls
             this.txb_Id = new System.Windows.Forms.TextBox();
             this.txb_Name = new System.Windows.Forms.TextBox();
             this.txb_Price = new System.Windows.Forms.TextBox();
-            this.rtb_Table = new System.Windows.Forms.RichTextBox();
             this.btn_GetAll = new System.Windows.Forms.Button();
             this.btn_Create = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
@@ -41,41 +40,40 @@ namespace ShopManagementApp.Controls
             this.lbl_Id = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_Price = new System.Windows.Forms.Label();
+            this.dgw_Books = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txb_CurrentId = new System.Windows.Forms.TextBox();
+            this.txb_PriceUpdate = new System.Windows.Forms.TextBox();
+            this.txb_NameUpdate = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgw_Books)).BeginInit();
             this.SuspendLayout();
             // 
             // txb_Id
             // 
-            this.txb_Id.Location = new System.Drawing.Point(144, 58);
+            this.txb_Id.Location = new System.Drawing.Point(163, 322);
             this.txb_Id.Name = "txb_Id";
             this.txb_Id.Size = new System.Drawing.Size(207, 26);
             this.txb_Id.TabIndex = 0;
             // 
             // txb_Name
             // 
-            this.txb_Name.Location = new System.Drawing.Point(144, 124);
+            this.txb_Name.Location = new System.Drawing.Point(163, 388);
             this.txb_Name.Name = "txb_Name";
             this.txb_Name.Size = new System.Drawing.Size(207, 26);
             this.txb_Name.TabIndex = 1;
             // 
             // txb_Price
             // 
-            this.txb_Price.Location = new System.Drawing.Point(144, 188);
+            this.txb_Price.Location = new System.Drawing.Point(163, 452);
             this.txb_Price.Name = "txb_Price";
             this.txb_Price.Size = new System.Drawing.Size(207, 26);
             this.txb_Price.TabIndex = 2;
             // 
-            // rtb_Table
-            // 
-            this.rtb_Table.Location = new System.Drawing.Point(453, 36);
-            this.rtb_Table.Name = "rtb_Table";
-            this.rtb_Table.Size = new System.Drawing.Size(372, 258);
-            this.rtb_Table.TabIndex = 4;
-            this.rtb_Table.Text = "";
-            this.rtb_Table.TextChanged += new System.EventHandler(this.rtb_Table_TextChanged);
-            // 
             // btn_GetAll
             // 
-            this.btn_GetAll.Location = new System.Drawing.Point(67, 393);
+            this.btn_GetAll.Location = new System.Drawing.Point(35, 535);
             this.btn_GetAll.Name = "btn_GetAll";
             this.btn_GetAll.Size = new System.Drawing.Size(103, 37);
             this.btn_GetAll.TabIndex = 5;
@@ -85,7 +83,7 @@ namespace ShopManagementApp.Controls
             // 
             // btn_Create
             // 
-            this.btn_Create.Location = new System.Drawing.Point(369, 393);
+            this.btn_Create.Location = new System.Drawing.Point(314, 535);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(103, 37);
             this.btn_Create.TabIndex = 6;
@@ -95,7 +93,7 @@ namespace ShopManagementApp.Controls
             // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(513, 393);
+            this.btn_Update.Location = new System.Drawing.Point(551, 535);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(103, 37);
             this.btn_Update.TabIndex = 7;
@@ -105,7 +103,7 @@ namespace ShopManagementApp.Controls
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(665, 393);
+            this.btn_Delete.Location = new System.Drawing.Point(423, 11);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(103, 37);
             this.btn_Delete.TabIndex = 8;
@@ -115,7 +113,7 @@ namespace ShopManagementApp.Controls
             // 
             // btn_GetById
             // 
-            this.btn_GetById.Location = new System.Drawing.Point(214, 393);
+            this.btn_GetById.Location = new System.Drawing.Point(172, 535);
             this.btn_GetById.Name = "btn_GetById";
             this.btn_GetById.Size = new System.Drawing.Size(103, 37);
             this.btn_GetById.TabIndex = 9;
@@ -126,7 +124,7 @@ namespace ShopManagementApp.Controls
             // lbl_Id
             // 
             this.lbl_Id.AutoSize = true;
-            this.lbl_Id.Location = new System.Drawing.Point(12, 58);
+            this.lbl_Id.Location = new System.Drawing.Point(31, 322);
             this.lbl_Id.Name = "lbl_Id";
             this.lbl_Id.Size = new System.Drawing.Size(23, 20);
             this.lbl_Id.TabIndex = 10;
@@ -135,7 +133,7 @@ namespace ShopManagementApp.Controls
             // lbl_Name
             // 
             this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(12, 124);
+            this.lbl_Name.Location = new System.Drawing.Point(31, 388);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(51, 20);
             this.lbl_Name.TabIndex = 11;
@@ -144,17 +142,84 @@ namespace ShopManagementApp.Controls
             // lbl_Price
             // 
             this.lbl_Price.AutoSize = true;
-            this.lbl_Price.Location = new System.Drawing.Point(12, 188);
+            this.lbl_Price.Location = new System.Drawing.Point(31, 452);
             this.lbl_Price.Name = "lbl_Price";
             this.lbl_Price.Size = new System.Drawing.Size(44, 20);
             this.lbl_Price.TabIndex = 12;
             this.lbl_Price.Text = "Price";
             // 
+            // dgw_Books
+            // 
+            this.dgw_Books.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgw_Books.Location = new System.Drawing.Point(423, 54);
+            this.dgw_Books.Name = "dgw_Books";
+            this.dgw_Books.RowHeadersWidth = 62;
+            this.dgw_Books.RowTemplate.Height = 28;
+            this.dgw_Books.Size = new System.Drawing.Size(590, 241);
+            this.dgw_Books.TabIndex = 14;
+            this.dgw_Books.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_Books_CellClick);
+            this.dgw_Books.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_Books_CellContentClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(571, 460);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 20);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Price";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(571, 396);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(571, 330);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 20);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Id";
+            // 
+            // txb_CurrentId
+            // 
+            this.txb_CurrentId.Location = new System.Drawing.Point(703, 330);
+            this.txb_CurrentId.Name = "txb_CurrentId";
+            this.txb_CurrentId.Size = new System.Drawing.Size(207, 26);
+            this.txb_CurrentId.TabIndex = 17;
+            // 
+            // txb_PriceUpdate
+            // 
+            this.txb_PriceUpdate.Location = new System.Drawing.Point(703, 454);
+            this.txb_PriceUpdate.Name = "txb_PriceUpdate";
+            this.txb_PriceUpdate.Size = new System.Drawing.Size(207, 26);
+            this.txb_PriceUpdate.TabIndex = 16;
+            // 
+            // txb_NameUpdate
+            // 
+            this.txb_NameUpdate.Location = new System.Drawing.Point(703, 396);
+            this.txb_NameUpdate.Name = "txb_NameUpdate";
+            this.txb_NameUpdate.Size = new System.Drawing.Size(207, 26);
+            this.txb_NameUpdate.TabIndex = 15;
+            // 
             // CrudBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 525);
+            this.ClientSize = new System.Drawing.Size(1103, 636);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txb_CurrentId);
+            this.Controls.Add(this.txb_PriceUpdate);
+            this.Controls.Add(this.txb_NameUpdate);
+            this.Controls.Add(this.dgw_Books);
             this.Controls.Add(this.lbl_Price);
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.lbl_Id);
@@ -163,12 +228,12 @@ namespace ShopManagementApp.Controls
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Create);
             this.Controls.Add(this.btn_GetAll);
-            this.Controls.Add(this.rtb_Table);
             this.Controls.Add(this.txb_Price);
             this.Controls.Add(this.txb_Name);
             this.Controls.Add(this.txb_Id);
             this.Name = "CrudBookForm";
             this.Text = "CrudBookForm";
+            ((System.ComponentModel.ISupportInitialize)(this.dgw_Books)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,7 +244,6 @@ namespace ShopManagementApp.Controls
         private System.Windows.Forms.TextBox txb_Id;
         private System.Windows.Forms.TextBox txb_Name;
         private System.Windows.Forms.TextBox txb_Price;
-        private System.Windows.Forms.RichTextBox rtb_Table;
         private System.Windows.Forms.Button btn_GetAll;
         private System.Windows.Forms.Button btn_Create;
         private System.Windows.Forms.Button btn_Update;
@@ -188,5 +252,12 @@ namespace ShopManagementApp.Controls
         private System.Windows.Forms.Label lbl_Id;
         private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.Label lbl_Price;
+        private System.Windows.Forms.DataGridView dgw_Books;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txb_CurrentId;
+        private System.Windows.Forms.TextBox txb_PriceUpdate;
+        private System.Windows.Forms.TextBox txb_NameUpdate;
     }
 }

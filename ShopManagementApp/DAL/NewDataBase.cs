@@ -1,4 +1,5 @@
-﻿using ShopManagementApp.Models;
+﻿using ShopManagementApp.Controls;
+using ShopManagementApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -6,6 +7,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ShopManagementApp.DAL
 {
@@ -16,6 +18,12 @@ namespace ShopManagementApp.DAL
         {
             return ConfigurationManager.ConnectionStrings[connectionString].ConnectionString;
         }
+        private void CheckConnection()
+        {
+            if (_sqlConnection.State == System.Data.ConnectionState.Closed)
+                _sqlConnection.Open();
+        }
+
         public NewDataBase(string connectionString)
         {
             string connection = GetConnectionString(connectionString);
@@ -31,11 +39,11 @@ namespace ShopManagementApp.DAL
             List<Book> books = new List<Book>();
             try
             {
-                _sqlConnection.Open();
+                CheckConnection();
                 string query = "SELECT Id,Name,Price FROM BOOKS";
                 using (SqlCommand sqlCommand = new SqlCommand(query, _sqlConnection))
                 {
-
+                    
 
                     using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
                     {
@@ -69,7 +77,7 @@ namespace ShopManagementApp.DAL
             Book book = new Book();
             try
             { 
-                _sqlConnection.Open();
+               
                 string query = $"SELECT Id,Name,Price FROM BOOKS WHERE ID={Id}";
              
                 using (SqlCommand sqlCommand = new SqlCommand(query, _sqlConnection))
@@ -102,17 +110,21 @@ namespace ShopManagementApp.DAL
             return book;
     }
        
-        public Book Insert(Book book)
+        public Book Add(Book book)
         {
 
            
             try
             {
+                CheckConnection();
 
-                _sqlConnection.Open();
-                string query = $"INSERT INTO Books (Name,Price) VALUES('{book.Name}',{book.Price})";
+                
+                string query = $"INSERT INTO Books  VALUES(@name,@price)";
                 using (SqlCommand sqlCommand = new SqlCommand(query, _sqlConnection))
                 {
+                    sqlCommand.Parameters.AddWithValue("@name", book.Name);
+                    sqlCommand.Parameters.AddWithValue("@price", book.Price);
+
                     int row = sqlCommand.ExecuteNonQuery();
                     
                 }
@@ -126,17 +138,22 @@ namespace ShopManagementApp.DAL
             }
             return book;
         }
-        public Book Update(int Id,Book book)
+        public Book Update(Book book)
         {
            
             try
             {
+                CheckConnection();
               
-                string query1 = $"UPDATE BOOKS SET NAME ='{book.Name}', PRICE = {book.Price} WHERE ID={Id}";
+                string query1 = $"UPDATE BOOKS SET Name=@name, Price=@price WHERE ID=@id";
                
                 using (SqlCommand sqlCommand = new SqlCommand(query1, _sqlConnection))
                 {
-                    int row = sqlCommand.ExecuteNonQuery();
+                    sqlCommand.Parameters.AddWithValue("@name", book.Name);
+                    sqlCommand.Parameters.AddWithValue("@price", book.Price);
+                    sqlCommand.Parameters.AddWithValue("@id", book.Id);
+
+                     sqlCommand.ExecuteNonQuery();
                    
                 }
 
@@ -154,13 +171,15 @@ namespace ShopManagementApp.DAL
 
             try
             {
-                _sqlConnection.Open();
-                string query1 = $"DELETE FROM BOOKS WHERE ID={Id} ";
+
+                CheckConnection();
+                string query1 = $"DELETE FROM BOOKS WHERE ID=@Id ";
 
                 using (SqlCommand sqlCommand = new SqlCommand(query1, _sqlConnection))
                 {
-                    int row = sqlCommand.ExecuteNonQuery();
-
+                    sqlCommand.Parameters.AddWithValue("@Id", Id);
+                   sqlCommand.ExecuteNonQuery();
+                    GetAll();
                 }
 
             }

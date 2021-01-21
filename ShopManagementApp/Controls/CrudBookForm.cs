@@ -25,15 +25,12 @@ namespace ShopManagementApp.Controls
         {
 
         }
-        public void Show()
+        public void GetAll()
         {
             using (NewDataBase dataBase = new NewDataBase("Test"))
             {
                 var books = dataBase.GetAll();
-                foreach (var book in books)
-                {
-                    rtb_Table.Text += $"ID: {book.Id}  Name:{book.Name}  Price:{book.Price}" + Environment.NewLine;
-                }
+                dgw_Books.DataSource = books;
             }
         }
         private void btn_GetAll_Click(object sender, EventArgs e)
@@ -41,11 +38,12 @@ namespace ShopManagementApp.Controls
             using (NewDataBase dataBase = new NewDataBase("Test"))
             {
                 var books = dataBase.GetAll();
-                rtb_Table.Text = "";
-                foreach (var book in books)
-                {
-                    rtb_Table.Text += $"ID: {book.Id}  Name:{book.Name}  Price:{book.Price}" + Environment.NewLine;
-                }
+                //rtb_Table.Text = "";
+                //foreach (var book in books)
+                //{
+                //    rtb_Table.Text += $"ID: {book.Id}  Name:{book.Name}  Price:{book.Price}" + Environment.NewLine;
+                //}
+                dgw_Books.DataSource = books;
             }
 
         }
@@ -57,8 +55,8 @@ namespace ShopManagementApp.Controls
 
                 int id = Convert.ToInt32(txb_Id.Text);
                 var book = dataBase.GetById(id);
-                rtb_Table.Text = "";
-                rtb_Table.Text = $"ID: {book.Id}  Name:{book.Name}  Price:{book.Price}" + Environment.NewLine;
+                //rtb_Table.Text = "";
+                //rtb_Table.Text = $"ID: {book.Id}  Name:{book.Name}  Price:{book.Price}" + Environment.NewLine;
 
             }
         }
@@ -67,15 +65,14 @@ namespace ShopManagementApp.Controls
         {
             using (NewDataBase dataBase = new NewDataBase("Test"))
             {
-                
-                Book book = new Book();                
-                book.Name = txb_Name.Text;
-                book.Price = Convert.ToDecimal(txb_Price.Text);
-                dataBase.Insert(book);
-                //rtb_Table.Text+= $"ID: {book.Id}  Name:{book.Name}  Price:{book.Price}" + Environment.NewLine;
-
-                rtb_Table.Text = "";
-                Show();
+                if (!String.IsNullOrEmpty(txb_Name.Text) && !String.IsNullOrEmpty(txb_Price.Text))
+                {
+                    Book book = new Book();
+                    book.Name = txb_Name.Text;
+                    book.Price = Convert.ToDecimal(txb_Price.Text);
+                    dataBase.Add(book);
+                    GetAll();
+                }
             }
         }
 
@@ -83,14 +80,20 @@ namespace ShopManagementApp.Controls
         {
             using (NewDataBase dataBase = new NewDataBase("Test"))
             {
-                int id = Convert.ToInt32(txb_Id.Text);
-                var book = dataBase.GetById(id);              
-                book.Name = txb_Name.Text;
-                book.Price = Convert.ToDecimal(txb_Price.Text);
-                dataBase.Update(id,book);
-                rtb_Table.Text = "Updated";
+                if (!String.IsNullOrEmpty(txb_NameUpdate.Text) && !String.IsNullOrEmpty(txb_PriceUpdate.Text))
+                {
+                    //int id = Convert.ToInt32(txb_Id.Text);
+                    //var book = dataBase.GetById(id);
+                    Book book = new Book()
+                    {
+                        Id = Convert.ToInt32(dgw_Books.CurrentRow.Cells[2].Value),
+                        Name = txb_NameUpdate.Text,
+                        Price = Convert.ToDecimal(txb_PriceUpdate.Text),
 
-
+                    };
+                    dataBase.Update(book);
+                    GetAll();
+                }
 
             }
 
@@ -100,13 +103,28 @@ namespace ShopManagementApp.Controls
         {
             using (NewDataBase dataBase = new NewDataBase("Test"))
             {
-                int id = Convert.ToInt32(txb_Id.Text);
-                rtb_Table.Text = "";
+                int id = Convert.ToInt32(dgw_Books.CurrentRow.Cells[2].Value);
+                //rtb_Table.Text = "";
+                //dataBase.Delete(id);
+                //rtb_Table.Text = "Deleted";
                 dataBase.Delete(id);
-                rtb_Table.Text = "Deleted";
-
 
             }
+
+        }
+
+        private void dgw_Books_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+
+        }
+
+        private void dgw_Books_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txb_CurrentId.Text = dgw_Books.CurrentRow.Cells[2].Value.ToString();
+            txb_NameUpdate.Text = dgw_Books.CurrentRow.Cells[3].Value.ToString();
+            txb_PriceUpdate.Text = dgw_Books.CurrentRow.Cells[1].Value.ToString();
+
 
         }
     }
