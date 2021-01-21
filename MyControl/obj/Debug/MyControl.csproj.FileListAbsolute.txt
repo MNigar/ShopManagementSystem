@@ -6,3 +6,11 @@ D:\C#course\ShopManagementApp\MyControl\obj\Debug\MyControl.csproj.CoreCompileIn
 D:\C#course\ShopManagementApp\MyControl\obj\Debug\MyControl.dll
 D:\C#course\ShopManagementApp\MyControl\obj\Debug\MyControl.pdb
 D:\C#course\ShopManagementApp\MyControl\obj\Debug\MyControl.csprojAssemblyReference.cache
+D:\COVID1904\ShopManagementSystem\MyControl\bin\Debug\MyControl.dll
+D:\COVID1904\ShopManagementSystem\MyControl\bin\Debug\MyControl.pdb
+D:\COVID1904\ShopManagementSystem\MyControl\obj\Debug\MyControl.csprojAssemblyReference.cache
+D:\COVID1904\ShopManagementSystem\MyControl\obj\Debug\MyControl.Controls.RegistrationControl.resources
+D:\COVID1904\ShopManagementSystem\MyControl\obj\Debug\MyControl.csproj.GenerateResource.cache
+D:\COVID1904\ShopManagementSystem\MyControl\obj\Debug\MyControl.csproj.CoreCompileInputs.cache
+D:\COVID1904\ShopManagementSystem\MyControl\obj\Debug\MyControl.dll
+D:\COVID1904\ShopManagementSystem\MyControl\obj\Debug\MyControl.pdb

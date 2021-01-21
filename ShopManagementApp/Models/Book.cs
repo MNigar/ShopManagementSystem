@@ -9,9 +9,10 @@ namespace ShopManagementApp.Models
    public  class Book:Entity
     { 
       #region Diger tapsiriqdan qalib
-      public string Image { get; set; }
+      //public string Image { get; set; }
       #endregion
         public decimal Price { get; set; }
+        //public string Author { get; set; }
 
     }
 }

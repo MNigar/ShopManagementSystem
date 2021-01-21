@@ -19,6 +19,7 @@ namespace ShopManagementApp.Controls
         public CrudBookForm()
         {
             InitializeComponent();
+            GetAll();
         }
 
         private void rtb_Table_TextChanged(object sender, EventArgs e)
@@ -55,6 +56,7 @@ namespace ShopManagementApp.Controls
 
                 int id = Convert.ToInt32(txb_Id.Text);
                 var book = dataBase.GetById(id);
+                dgw_Books.DataSource = book;
                 //rtb_Table.Text = "";
                 //rtb_Table.Text = $"ID: {book.Id}  Name:{book.Name}  Price:{book.Price}" + Environment.NewLine;
 
@@ -126,6 +128,11 @@ namespace ShopManagementApp.Controls
             txb_PriceUpdate.Text = dgw_Books.CurrentRow.Cells[1].Value.ToString();
 
 
+        }
+
+        private void CrudBookForm_Load(object sender, EventArgs e)
+        {
+          
         }
     }
 }

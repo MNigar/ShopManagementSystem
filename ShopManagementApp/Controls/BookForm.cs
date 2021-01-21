@@ -25,19 +25,19 @@ namespace ShopManagementApp.Controls
             {
                 Id = 1,
                 Name = "C#",
-                Image = @"D:\C#course\ShopManagementApp\ShopManagementApp\Images\4136Vv9FsvL._SX334_BO1,204,203,200_.jpg"
+                //Image = @"D:\C#course\ShopManagementApp\ShopManagementApp\Images\4136Vv9FsvL._SX334_BO1,204,203,200_.jpg"
             };
             Book book2 = new Book()
             {
                 Id = 1,
                 Name = "Python",
-                Image= @"D:\C#course\ShopManagementApp\ShopManagementApp\Images\51tjBN6kkEL._SX374_BO1,204,203,200_.jpg"
+                //Image= @"D:\C#course\ShopManagementApp\ShopManagementApp\Images\51tjBN6kkEL._SX374_BO1,204,203,200_.jpg"
             };
             Book book3 = new Book()
             {
                 Id = 1,
                 Name = "Java",
-                Image = @"D:\C#course\ShopManagementApp\ShopManagementApp\Images\images.jpg"
+                //Image = @"D:\C#course\ShopManagementApp\ShopManagementApp\Images\images.jpg"
             };
             DataBaseSecond.Books.Add(book1);
             DataBaseSecond.Books.Add(book2);
@@ -54,15 +54,15 @@ namespace ShopManagementApp.Controls
                 x +=310;  
                 this.Controls.Add(groupBox);
                 #region add book image first method
-                //PictureBox picture = new PictureBox();
-                //picture.Name = "pictureBox";
-                //picture.Size = new Size(100, 100);
-                //picture.Location = new Point(picX, 23);
-                //picture.SizeMode = PictureBoxSizeMode.StretchImage;
+                PictureBox picture = new PictureBox();
+                picture.Name = "pictureBox";
+                picture.Size = new Size(100, 100);
+                picture.Location = new Point(picX, 23);
+                picture.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picture.Image = Image.FromFile(book.Image);
 
-                //picX += 310;
-                //this.Controls.Add(picture);
+                picX += 310;
+                this.Controls.Add(picture);
                 #endregion
             }
 
