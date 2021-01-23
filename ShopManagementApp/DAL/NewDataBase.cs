@@ -200,7 +200,7 @@ namespace ShopManagementApp.DAL
             try
             {
                 CheckConnection();
-                string query = $"SELECT Id ,Name From Books WHERE Name LIKE '%{value}%'";
+                string query = $"SELECT Id ,Name,Price From Books WHERE Name LIKE '%{value}%'";
                      
 
                 using (SqlCommand sqlCommand = new SqlCommand(query, _sqlConnection))
@@ -217,6 +217,8 @@ namespace ShopManagementApp.DAL
 
                             book.Id = Convert.ToInt32(sqlDataReader["Id"].ToString());
                             book.Name = sqlDataReader["Name"].ToString();
+                            book.Price = Convert.ToDecimal(sqlDataReader["Price"].ToString());
+
                             books.Add(book);
                         }
                     };
