@@ -192,7 +192,46 @@ namespace ShopManagementApp.DAL
         
         }
 
+        public List<Book> Search(string value)
+        {
+            List<Book> books = new List<Book>();
 
+
+            try
+            {
+                CheckConnection();
+                string query = $"SELECT Id ,Name From Books WHERE Name LIKE '%{value}%'";
+                     
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, _sqlConnection))
+                {
+
+
+                    using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                    {
+
+
+                        while (sqlDataReader.Read())
+                        {
+                            Book book = new Book();
+
+                            book.Id = Convert.ToInt32(sqlDataReader["Id"].ToString());
+                            book.Name = sqlDataReader["Name"].ToString();
+                            books.Add(book);
+                        }
+                    };
+                }
+
+
+            }
+            catch (SqlException exception)
+            {
+                throw exception;
+
+            }
+
+            return books;
+        }
         public void Dispose()
         {
             _sqlConnection.Dispose();

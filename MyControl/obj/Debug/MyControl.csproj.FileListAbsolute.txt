@@ -14,3 +14,11 @@ D:\COVID1904\ShopManagementSystem\MyControl\obj\Debug\MyControl.csproj.GenerateR
 D:\COVID1904\ShopManagementSystem\MyControl\obj\Debug\MyControl.csproj.CoreCompileInputs.cache
 D:\COVID1904\ShopManagementSystem\MyControl\obj\Debug\MyControl.dll
 D:\COVID1904\ShopManagementSystem\MyControl\obj\Debug\MyControl.pdb
+D:\Covid19\ShopManagementSystem\MyControl\bin\Debug\MyControl.dll
+D:\Covid19\ShopManagementSystem\MyControl\bin\Debug\MyControl.pdb
+D:\Covid19\ShopManagementSystem\MyControl\obj\Debug\MyControl.csprojAssemblyReference.cache
+D:\Covid19\ShopManagementSystem\MyControl\obj\Debug\MyControl.Controls.RegistrationControl.resources
+D:\Covid19\ShopManagementSystem\MyControl\obj\Debug\MyControl.csproj.GenerateResource.cache
+D:\Covid19\ShopManagementSystem\MyControl\obj\Debug\MyControl.csproj.CoreCompileInputs.cache
+D:\Covid19\ShopManagementSystem\MyControl\obj\Debug\MyControl.dll
+D:\Covid19\ShopManagementSystem\MyControl\obj\Debug\MyControl.pdb

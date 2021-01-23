@@ -134,6 +134,18 @@ namespace ShopManagementApp.Controls
         {
           
         }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            using (NewDataBase dataBase = new NewDataBase("Test"))
+            {
+
+                string value = txb_Search.Text;
+                var book = dataBase.Search(value);
+                dgw_Books.DataSource = book;
+
+            }
+        }
     }
 }
 
